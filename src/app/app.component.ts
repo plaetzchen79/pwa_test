@@ -40,7 +40,7 @@ export class AppComponent {
 
     this.swUpdate.available.subscribe(event => {
       console.log("current version is", event.current);
-      console.log("available version is", event.available);
+      console.log("new available version is", event.available);
       // if (promptUser(event)) {
       // //  swUpdate.activateUpdate().then(() => document.location.reload());
       // }

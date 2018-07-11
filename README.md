@@ -1,5 +1,6 @@
 # PwaTest
 
+A simple Test to show Angular 6 PWA and ServiceWorker functionality
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
 
 ## Development server
