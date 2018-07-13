@@ -1,9 +1,16 @@
 # PwaTest
 
-A simple Test to show Angular 6 PWA and ServiceWorker functionality
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
+A simple Test to show Angular 6 PWA and ServiceWorker functionality.
+A siple example how to use update and push-servers can bee seen in the app-somponent.ts
 
-## Development server
+## How to start
+Run  `ng build --prod` to create the pwa in the /dist folder.
+Run a local http-server in the dist folder.
+`cd .\dist\pwa-test\`
+`http-serve`
+
+Start browser with `http://localhost:8080/`.
+Press F12. Check tab "Application->ServiceWorker"
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 

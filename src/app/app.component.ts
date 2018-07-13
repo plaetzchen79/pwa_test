@@ -14,7 +14,7 @@ export class AppComponent {
     "BJ52Yp_k-RZXH8KyCEgKMTA8voMG70saSfLpj37Y5TkcaX0DGyjO9e50NOO5cIiY8dvaBYLM3jr2QQe_AuHbXoY";
   sub: PushSubscription;
 
-  title = "My first PWA";
+  title = 'My first PWA';
 
   constructor(
     private swUpdate: SwUpdate,
@@ -23,31 +23,35 @@ export class AppComponent {
   ) {
     console.log(this.PUBLIC_KEY);
 
-    this.swPushListener
-      .requestSubscription({ serverPublicKey: this.PUBLIC_KEY })
-      .then(sub => {
-        this.sub = sub;
-        console.log("sub:", this.sub.toJSON());
-
-        this.pushService.addSubscriber(this.sub).subscribe(result => {
-          console.log("Add subscriber request answer", result);
-        });
-      });
-
-    this.swPushListener.messages.subscribe(message => {
-      console.log("Message received", message);
-    });
-
+    // check for Updates via swUpdateService
     this.swUpdate.available.subscribe(event => {
-      console.log("current version is", event.current);
-      console.log("new available version is", event.available);
+      console.log('current version is', event.current);
+      console.log('new available version is', event.available);
       // if (promptUser(event)) {
       // //  swUpdate.activateUpdate().then(() => document.location.reload());
       // }
     });
     this.swUpdate.activated.subscribe(event => {
-      console.log("old version was", event.previous);
-      console.log("new version is", event.current);
+      console.log('old version was', event.previous);
+      console.log('new version is', event.current);
     });
+
+    // subscripe to messages / push notifications
+    // and listen to new ones - needs a push server
+    this.swPushListener
+      .requestSubscription({ serverPublicKey: this.PUBLIC_KEY })
+      .then(sub => {
+        this.sub = sub;
+        console.log('sub:', this.sub.toJSON());
+
+        this.pushService.addSubscriber(this.sub).subscribe(result => {
+          console.log('Add subscriber request answer', result);
+        });
+      });
+
+    this.swPushListener.messages.subscribe(message => {
+      console.log('Message received', message);
+    });
+
   }
 }
