@@ -13,7 +13,7 @@ A simple example how to use update and push-servers can bee seen in the src/app/
 - Fresh (Up to date)  
 
 Supported by Google, Microsoft, Intel, Apple..
-More support to come.
+More support to come in the future.
 
 ## How to start
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
@@ -71,8 +71,8 @@ Run `ng add @angular/pwa`.
 This command does:
 - update your package.json
 - creating config files 
-   ngsw-config.json: Service Worker config
-   ./src/manifest.json: Mainfest
+  - ngsw-config.json: Service Worker config
+  - ./src/manifest.json: Mainfest
 - Register Service Worker (Bootstrap) in src/app/app.module
 - something more (e.g. creating some default assets)
 
@@ -84,9 +84,9 @@ Make a production build, switch to /dist/ and run the http-server.
 
 ## Further help
 
-ServiceWorker Status: https://jakearchibald.github.io/isserviceworkerready/
-PWA Builder: https://www.pwabuilder.com/
-PWA Examples to install: https://pwa.rocks/
-Official Angular documentatin: https://angular.io/guide/service-worker-intro
-Something to watch: https://www.youtube.com/watch?v=5YtNQJQu31Y
+- ServiceWorker Status: https://jakearchibald.github.io/isserviceworkerready/
+- PWA Builder: https://www.pwabuilder.com/
+- PWA Examples to install: https://pwa.rocks/
+- Official Angular documentatin: https://angular.io/guide/service-worker-intro
+- Something to watch: https://www.youtube.com/watch?v=5YtNQJQu31Y
 
