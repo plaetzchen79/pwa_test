@@ -1,6 +1,6 @@
 # PwaTest
 
-A simple Test to show Angular 6 PWA and ServiceWorker functionality.
+A simple Test to show Angular 7 PWA and ServiceWorker functionality.
 Just to give you a start.
 A simple example how to use update and push-servers can bee seen in the src/app/app-component.ts
 
@@ -79,7 +79,7 @@ This command does:
 Look the ngsw-config.json to configure caches (assets and data).
 See: https://angular.io/guide/service-worker-config#assetgroups
 
-Look mnifest to tell the os how your pwa should be handled/ looks like.
+Look manifest to tell the os how your pwa should be handled/ looks like.
 Make a production build, switch to /dist/ and run the http-server.
 
 ## Further help
